@@ -1,1 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
+@import "style/colors";
+@import "style/fonts";
+@import "style/mixins";
+
+body {
+    margin: 0;
+    background-color: $background-main;
+}
+
+.home {
+    @include flexbox($direction: column, $justify: flex-start, $align: center);
+    gap: 25px;
+    margin: 25px;
+
+    .home__header {
+        @include flexbox($direction: row, $justify: flex-start, $align: center);
+        gap: 10px;
+
+        .home__header_logo {
+            img {
+                width: 72px;
+                height: 72px;
+            }
+        }
+
+        .home__header_text {
+            font-family: 'CreatoDisplay-Black';
+            font-size: 72px;
+            color: $text-main;
+        }
+    }
+
+    .home__message, .home__boards {
+        width: 50%;
+        background-color: $background-panel;
+        color: $text-main;
+
+        .home__message_title, .home__boards_title {
+            padding: 5px 10px;
+            font-family: 'CreatoDisplay-Bold';
+            font-size: 24px;
+        }
+
+        .home__message_title {
+            background-color: $main-red;
+        }
+
+        .home__boards_title {
+            background-color: $main-green;
+        }
+
+        .home__message_content {
+            padding: 5px 10px;
+            font-family: 'CreatoDisplay-Regular';
+            font-size: 16px;
+        }
+
+        .home__boards_list {
+            @include flexbox($direction: row);
+            gap: 25px;
+            padding: 5px 10px;
+            font-size: 16px;
+
+            .home__boards_list_group {
+                @include flexbox($direction: column);
+                gap: 5px;
+
+                .home__boards_list_group_title {
+                    font-family: 'CreatoDisplay-Bold';
+                    text-decoration: underline;
+                }
+
+                .home__boards_list_group_item {
+                    font-family: 'CreatoDisplay-Regular';
+
+                    a {
+                        color: $text-main;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $main-green;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
