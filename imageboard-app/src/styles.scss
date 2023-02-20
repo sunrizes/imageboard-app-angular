@@ -5,6 +5,7 @@
 body {
     margin: 0;
     background-color: $background-main;
+    font-family: 'Unifont';
 }
 
 .home {
@@ -24,7 +25,6 @@ body {
         }
 
         .home__header_text {
-            font-family: 'CreatoDisplay-Black';
             font-size: 72px;
             color: $text-main;
         }
@@ -37,7 +37,6 @@ body {
 
         .home__message_title, .home__boards_title {
             padding: 5px 10px;
-            font-family: 'CreatoDisplay-Bold';
             font-size: 24px;
         }
 
@@ -51,7 +50,6 @@ body {
 
         .home__message_content {
             padding: 5px 10px;
-            font-family: 'CreatoDisplay-Regular';
             font-size: 16px;
         }
 
@@ -66,12 +64,10 @@ body {
                 gap: 5px;
 
                 .home__boards_list_group_title {
-                    font-family: 'CreatoDisplay-Bold';
                     text-decoration: underline;
                 }
 
                 .home__boards_list_group_item {
-                    font-family: 'CreatoDisplay-Regular';
 
                     a {
                         color: $text-main;
